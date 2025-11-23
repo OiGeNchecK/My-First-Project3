@@ -5,7 +5,7 @@ import java.util.Optional;
 public interface Stackable {
     boolean isEmpty();
     boolean isFull();
-    void push(int element) throws StackFullException;
+    void push(int element);
     int pop();
     int peek();
     Optional<Integer> popOptional();

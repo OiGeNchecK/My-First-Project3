@@ -26,6 +26,7 @@ public class Stack implements Stackable {
     public void push(int element) {
         if (isFull()) {
             throw new StackFullException("Стек повний!");
+
         }
 
         top++;
@@ -36,20 +37,25 @@ public class Stack implements Stackable {
     public int pop() {
         if (isEmpty()) {
             throw new StackEmptyException("Стек порожній!");
+
         }
 
         int value = data[top];
         top--;
         return value;
+
     }
 
     @Override
     public int peek() {
         if (isEmpty()) {
             throw new StackEmptyException("Стек порожній!");
+
         }
 
         return data[top];
+
+
     }
 
     @Override
@@ -58,6 +64,8 @@ public class Stack implements Stackable {
             return Optional.empty();
         }
 
-        return Optional.of(pop());
+        int value = data[top];
+        top--;
+        return Optional.of(value);
     }
 }
