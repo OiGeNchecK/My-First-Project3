@@ -1,0 +1,28 @@
+openapi: 3.1.0
+info:
+  title: Loyalty Card API
+  description: Loyalty Card API
+  version: 0.0.1
+servers:
+  - url: http://lokalhost:8080
+paths:
+  /login:
+    get:
+      summary: Fake endpoint
+      responses:
+        200:
+          description: OK
+        201:
+          Description: Created
+        400:
+          Description: Bad Request
+        401:
+          description: Unautorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+        500:
+          description: Internet Server Error
+
+
